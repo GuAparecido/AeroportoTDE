@@ -10,7 +10,7 @@ class Aeroporto
         $this->$codigo_aeroporto = $codigo_aeroporto;
         $this->$capacidade = $capacidade;
         $this->$localizacao = $localizacao;
-    }
+    } // a
 
     public function getCodigo_Aeroporto(): int{
         return $this->codigo_aeroporto;
