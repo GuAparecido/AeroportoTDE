@@ -1,39 +1,44 @@
 <?php
-class Companhia
+class Companhia extends Aeroporto
 {
-    public int $codigo_companhia;
-    public string $nome;
-    public string $nacionalidade;
+    private int $codigoCompanhia;
+    private string $nome;
+    private string $paisOrigem;
 
-    public function __construct($codigo_companhia, $nome, $nacionalidade)
+    public function __construct(int $codigoCompanhia, string $nome, string $paisOrigem)
     {
-        $this->codigo_companhia = $codigo_companhia;
+        $this->codigoCompanhia = $codigoCompanhia;
         $this->nome = $nome;
-        $this->nacionalidade = $nacionalidade;
+        $this->paisOrigem = $paisOrigem;
     }
 
-    public function getCodigo_Companhia(): int{
-        return $this->codigo_companhia;
+    public function getCodigoCompanhia(): int
+    {
+        return $this->codigoCompanhia;
     }
 
-    public function setCodigo_Companhia($codigo_companhia): void{
-        $this->codigo_companhia = $codigo_companhia;
-    }
-
-    public function getNome(): string{
+    public function getNome(): string
+    {
         return $this->nome;
     }
 
-    public function setNome($nome): void{
+    public function getPaisOrigem(): string
+    {
+        return $this->paisOrigem;
+    }
+
+    public function setCodigoCompanhia(int $codigoCompanhia): void
+    {
+        $this->codigoCompanhia = $codigoCompanhia;
+    }
+
+    public function setNome(string $nome): void
+    {
         $this->nome = $nome;
     }
 
-    public function getNacionalidade(): int{
-        return $this->nacionalidade;
+    public function setPaisOrigem(string $paisOrigem): void
+    {
+        $this->paisOrigem = $paisOrigem;
     }
-
-    public function setNacionalidade($nacionalidade): void{
-        $this->nacionalidade = $nacionalidade;
-    }
-
 }

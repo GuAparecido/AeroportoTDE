@@ -1,35 +1,44 @@
 <?php
 class Almoxarifado
 {
-    private float $localizacao;
-    private int $codigo_produto;
-    private int $codigo_cliente;
+    private Aeroporto $aeroporto;
+    private float $quantidadeArmazenamento;
+    private Carga $codigoCarga;
 
-    public function __construct ($localizacao, $codigo_produto, $codigo_cliente)
+    public function __construct(Aeroporto $aeroporto, float $quantidadeArmazenamento, Carga $codigoCarga)
     {
-        $this->$localizacao = $localizacao;
-        $this->$codigo_produto = $codigo_produto;
-        $this->$codigo_cliente = $codigo_cliente;
+        $this->aeroporto = $aeroporto;
+        $this->quantidadeArmazenamento = $quantidadeArmazenamento;
+        $this->codigoCarga = $codigoCarga;
     }
 
-    public function getLocalizacao(): float{
-        return $this->localizacao;
-    }
-    public function setLocalizacao($localizacao): void{
-        $this->localizacao = $localizacao;
+    public function getAeroporto(): Aeroporto
+    {
+        return $this->aeroporto;
     }
 
-    public function getCodigo_Produto(): int{
-        return $this->codigo_produto;
-    }
-    public function setCodigo_Produto($codigo_produto): void{
-        $this->codigo_produto = $codigo_produto;
+    public function getQuantidadeArmazenamento(): float
+    {
+        return $this->quantidadeArmazenamento;
     }
 
-    public function getCodigo_Cliente(): int{
-        return $this->codigo_cliente;
+    public function getCodigoCarga(): Carga
+    {
+        return $this->codigoCarga;
     }
-    public function setCodigo_Cliente($codigo_cliente): void{
-        $this->codigo_cliente;
+
+    public function setAeroporto(Aeroporto $aeroporto): void
+    {
+        $this->aeroporto = $aeroporto;
+    }
+
+    public function setQuantidadeArmazenamento(float $quantidadeArmazenamento): void
+    {
+        $this->quantidadeArmazenamento = $quantidadeArmazenamento;
+    }
+
+    public function setCodigoCarga(Carga $codigoCarga): void
+    {
+        $this->codigoCarga = $codigoCarga;
     }
 }

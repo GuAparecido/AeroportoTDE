@@ -1,37 +1,56 @@
 <?php
-class Aeroporto
+class Aeroporto extends Voo
 {
-    private int $codigo_aeroporto;
-    private string $capacidade;
+    private int $codigoAeroporto;
+    private int $capacidadeAeronaves;
+    private int $capacidadePublico;
     private string $localizacao;
 
-    public function __construct($codigo_aeroporto, $capacidade, $localizacao)
+    public function __construct(int $codigoAeroporto, int $capacidadeAeronaves, int $capacidadePublico, string $localizacao)
     {
-        $this->$codigo_aeroporto = $codigo_aeroporto;
-        $this->$capacidade = $capacidade;
-        $this->$localizacao = $localizacao;
-    } // a
-
-    public function getCodigo_Aeroporto(): int{
-        return $this->codigo_aeroporto;
+        $this->codigoAeroporto = $codigoAeroporto;
+        $this->capacidadeAeronaves = $capacidadeAeronaves;
+        $this->capacidadePublico = $capacidadePublico;
+        $this->localizacao = $localizacao;
     }
 
-    public function setCodigo_Aeroporto($codigo_aeroporto): void{
-        $this->codigo_aeroporto = $codigo_aeroporto;
+    public function getCodigoAeroporto(): int
+    {
+        return $this->codigoAeroporto;
     }
 
-    public function getCapacidade(): string{
-        return $this->capacidade;
+    public function getCapacidadeCarros(): int
+    {
+        return $this->capacidadeAeronaves;
     }
 
-    public function setCapacidade($capacidade): void{
-        $this->capacidade = $capacidade;
+    public function getCapacidadePublico(): int
+    {
+        return $this->capacidadePublico;
     }
 
-    public function getLocalicazao(): string{
+    public function getLocalizacao(): string
+    {
         return $this->localizacao;
     }
-    public function setLocalizacao($localizacao): void{
+
+    public function setCodigoAeroporto(int $codigoAeroporto): void
+    {
+        $this->codigoAeroporto = $codigoAeroporto;
+    }
+
+    public function setCapacidadeAeronaves(int $capacidadeAeronaves): void
+    {
+        $this->capacidadeAeronaves = $capacidadeAeronaves;
+    }
+
+    public function setCapacidadePublico(int $capacidadePublico): void
+    {
+        $this->capacidadePublico = $capacidadePublico;
+    }
+
+    public function setLocalizacao(string $localizacao): void
+    {
         $this->localizacao = $localizacao;
     }
 }

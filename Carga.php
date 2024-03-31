@@ -1,10 +1,10 @@
 <?php
-class Cargas
+class Carga
 {
-    private int $codigo_carga;
+    private int $codigoCarga;
     private string $tipo;
     private int $peso;
-    private int $codigo_despachante;
+    private int $codigoCliente;
 
     public function __construct($codigo_carga, $tipo, $peso, $codigo_despachante)
     {
@@ -14,11 +14,11 @@ class Cargas
         $this->$codigo_despachante = $codigo_despachante;
     }
 
-    public function getCodigo_Carga(): int{
-        return $this->codigo_carga;
+    public function getCodigoCarga(): int{
+        return $this->codigoCarga;
     }
-    public function setCodigo_Carga($codigo_carga): void{
-        $this->codigo_carga = $codigo_carga;
+    public function setCodigoCarga($codigoCarga): void{
+        $this->codigoCarga = $codigoCarga;
     }
 
     public function getTipo(): string{
@@ -35,10 +35,10 @@ class Cargas
         $this->peso = $peso;
     }
 
-    public function getCodigo_Despachante(): int{
-        return $this->codigo_despachante;
+    public function getCodigoCliente(): int{
+        return $this->codigoCliente;
     }
-    public function setCodigo_Despachante($codigo_despachante): void{
-        $this->codigo_despachante = $codigo_despachante;
+    public function setCodigoCliente($codigoCliente): void{
+        $this->codigoCliente = $codigoCliente;
     }
 }

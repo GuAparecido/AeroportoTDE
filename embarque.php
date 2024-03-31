@@ -1,26 +1,44 @@
 <?php
 class Embarque
 {
-    public string $quantidade_embarque;
-    public int $bagagem_mao;
+    private Voo $voo;
+    private int $quantidadeEmbarcados;
+    private int $bagagemMao;
 
-    public function __construct($quantidade_embarque, $bagagem_mao)
+    public function __construct(Voo $voo, int $quantidadeEmbarcados, bool $bagagemMao)
     {
-        $this->quantidade_embarque = $quantidade_embarque;
-        $this->bagagem_mao = $bagagem_mao;
+        $this->voo = $voo;
+        $this->quantidadeEmbarcados = $quantidadeEmbarcados;
+        $this->bagagemMao = $bagagemMao;
     }
 
-    public function getQuantidade_embarque(): int{
-        return $this->quantidade_embarque;
-    }
-    public function setQuantidade_embarque($quantidade_embarque): void{
-        $this->quantidade_embarque = $quantidade_embarque;
+    public function getVoo(): Voo
+    {
+        return $this->voo;
     }
 
-    public function getBagagem_mao(): string{
-        return $this->bagagem_mao;
+    public function getQuantidadeEmbarcados(): int
+    {
+        return $this->quantidadeEmbarcados;
     }
-    public function setBagagem_mao($bagagem_mao): void{
-        $this->bagagem_mao = $bagagem_mao;
+
+    public function getBagagemMao(): int
+    {
+        return $this->bagagemMao;
+    }
+
+    public function setVoo(Voo $voo): void
+    {
+        $this->voo = $voo;
+    }
+
+    public function setQuantidadeEmbarcados(int $quantidadeEmbarcados): void
+    {
+        $this->quantidadeEmbarcados = $quantidadeEmbarcados;
+    }
+
+    public function setBagagemMao(int $bagagemMao): void
+    {
+        $this->bagagemMao = $bagagemMao;
     }
 }

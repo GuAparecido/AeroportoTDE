@@ -1,60 +1,32 @@
 <?php
-class Cliente
+class Cliente extends Pessoa
 {
-    private int $codigo_cliente;
-    private string $nome;
-    private int $idade;
-    private string $cpf;
-    private string $rg;
+    private int $codigoCliente;
+    private DateTime $dataCadastro;
 
-    public function __construct($codigo_cliente, $nome, $idade, $cpf, $rg)
+    public function __construct(int $codigoCliente, DateTime $dataCadastro)
     {
-        $this->codigo_cliente = $codigo_cliente;
-        $this->nome = $nome;
-        $this->idade = $idade;
-        $this->cpf = $cpf;
-        $this->rg = $rg;
+        $this->codigoCliente = $codigoCliente;
+        $this->dataCadastro = $dataCadastro;
     }
 
-    public function getCodigo_Cliente(): int{
-        return $this->codigo_cliente;
+    public function getCodigoCliente(): int
+    {
+        return $this->codigoCliente;
     }
 
-    public function setCodigo_Cliente($codigo_cliente): void{
-        $this->codigo_cliente = $codigo_cliente;
+    public function getDataCadastro(): DateTime
+    {
+        return $this->dataCadastro;
     }
 
-    public function getNome(): string{
-        return $this->nome;
+    public function setCodigoCliente(int $codigoCliente): void
+    {
+        $this->codigoCliente = $codigoCliente;
     }
 
-    public function setNome($nome): void{
-        $this->nome = $nome;
+    public function setDataCadastro(DateTime $dataCadastro): void
+    {
+        $this->dataCadastro = $dataCadastro;
     }
-
-    public function getIdade(): int{
-        return $this->idade;
-    }
-
-    public function setIdade($idade): void{
-        $this->idade = $idade;
-    }
-
-    public function getRg(): int{
-        return $this->rg;
-    }
-
-    public function setRg($rg): void{
-        $this->rg = $rg;
-    }
-
-    public function getCpf(): int{
-        return $this->cpf;
-    }
-
-    public function setCpf($cpf): void{
-        $this->cpf = $cpf;
-    }
-
 }
-

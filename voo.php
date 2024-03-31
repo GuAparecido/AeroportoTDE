@@ -1,58 +1,92 @@
 <?php
 class Voo
 {
-    public int $codigo_voo;
-    public int $passageiros;
-    public string $tipo_servico;
-    public float $local_partida;
-    public float $local_destino;
-    
-    public function __construct($codigo_voo, $passageiros, $tipo_servico, $local_partida, $local_destino)
+    private int $codigoVoo;
+    private Ticket $numeroTicket;
+    private Aeronave $aeronave;
+    private Servico $tipoServico;
+    private Aeroporto $localPartida;
+    private Aeroporto $localDestino;
+    private float $tempoVoo;
+
+    public function __construct(int $codigoVoo, Ticket $numeroTicket, Aeronave $aeronave, Servico $tipoServico, Aeroporto $localPartida, Aeroporto $localDestino, float $tempoVoo)
     {
-        $this->codigo_voo = $codigo_voo;
-        $this->passageiros = $passageiros;
-        $this->tipo_servico = $tipo_servico;
-        $this->local_partida = $local_partida;
-        $this->local_destino = $local_destino;
+        $this->codigoVoo = $codigoVoo;
+        $this->numeroTicket = $numeroTicket;
+        $this->aeronave = $aeronave;
+        $this->tipoServico = $tipoServico;
+        $this->localPartida = $localPartida;
+        $this->localDestino = $localDestino;
+        $this->tempoVoo = $tempoVoo;
     }
 
-    public function getCodigo_Voo(): string{
-        return $this->codigo_voo;
+    public function getCodigoVoo(): int
+    {
+        return $this->codigoVoo;
     }
 
-    public function setCodigo_Voo($codigo_voo): void{
-        $this->codigo_voo = $codigo_voo;
+    public function getNumeroTicket(): Ticket
+    {
+        return $this->numeroTicket;
     }
 
-    public function getNumero_Passageiros(): int{
-        return $this->passageiros;
+    public function getAeronave(): Aeronave
+    {
+        return $this->aeronave;
     }
 
-    public function setNumero_Passageiros($passageiros): void{
-        $this->passageiros = $passageiros;
+    public function getTipoServico(): Servico
+    {
+        return $this->tipoServico;
     }
 
-    public function getNome_Tipo_servico(): string{
-        return $this->tipo_servico;
+    public function getLocalPartida(): Aeroporto
+    {
+        return $this->localPartida;
     }
 
-    public function setNome_Tipo_servico($tipo_servico): void{
-        $this->$tipo_servico = $tipo_servico;
+    public function getLocalDestino(): Aeroporto
+    {
+        return $this->localDestino;
     }
 
-    public function getLocal_partida(): int{
-        return $this->local_partida;
+    public function getTempoVoo(): float
+    {
+        return $this->tempoVoo;
     }
 
-    public function setLocal_partida($local_partida): void{
-        $this->local_partida = $local_partida;
+    public function setCodigoVoo(int $codigoVoo): void
+    {
+        $this->codigoVoo = $codigoVoo;
     }
 
-    public function getLocal_destino(): int{
-        return $this->local_partida;
+    public function setNumeroTicket(Ticket $numeroTicket): void
+    {
+        $this->numeroTicket = $numeroTicket;
     }
 
-    public function setLocal_destino($local_destino): void{
-        $this->local_destino = $local_destino;
+    public function setAeronave(Aeronave $aeronave): void
+    {
+        $this->aeronave = $aeronave;
+    }
+
+    public function setTipoServico(Servico $tipoServico): void
+    {
+        $this->tipoServico = $tipoServico;
+    }
+
+    public function setLocalPartida(Aeroporto $localPartida): void
+    {
+        $this->localPartida = $localPartida;
+    }
+
+    public function setLocalDestino(Aeroporto $localDestino): void
+    {
+        $this->localDestino = $localDestino;
+    }
+
+    public function setTempoVoo(float $tempoVoo): void
+    {
+        $this->tempoVoo = $tempoVoo;
     }
 }
