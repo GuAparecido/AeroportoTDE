@@ -2,12 +2,12 @@
 class Funcionario extends Pessoa
 {
     private int $codigoFuncionario;
-    private string $cargoFuncionario;
+    private Cargo $cargoFuncionario;
     private string $contrato;
     private float $salario;
     private DateTime $dataContratacao;
 
-    public function __construct(int $codigoFuncionario, string $cargoFuncionario, string $contrato, float $salario, DateTime $dataContratacao)
+    public function __construct(int $codigoFuncionario, Cargo $cargoFuncionario, string $contrato, float $salario, DateTime $dataContratacao)
     {
         $this->codigoFuncionario = $codigoFuncionario;
         $this->cargoFuncionario = $cargoFuncionario;
@@ -21,7 +21,7 @@ class Funcionario extends Pessoa
         return $this->codigoFuncionario;
     }
 
-    public function getCargoFuncionario(): string
+    public function getCargoFuncionario(): Cargo
     {
         return $this->cargoFuncionario;
     }
@@ -46,7 +46,7 @@ class Funcionario extends Pessoa
         $this->codigoFuncionario = $codigoFuncionario;
     }
 
-    public function setCargoFuncionario(string $cargoFuncionario): void
+    public function setCargoFuncionario(Cargo $cargoFuncionario): void
     {
         $this->cargoFuncionario = $cargoFuncionario;
     }

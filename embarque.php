@@ -3,13 +3,13 @@ class Embarque
 {
     private Voo $voo;
     private int $quantidadeEmbarcados;
-    private int $bagagemMao;
+    private int $quantidadeBagagem;
 
-    public function __construct(Voo $voo, int $quantidadeEmbarcados, bool $bagagemMao)
+    public function __construct(Voo $voo, int $quantidadeEmbarcados, bool $quantidadeBagagem)
     {
         $this->voo = $voo;
         $this->quantidadeEmbarcados = $quantidadeEmbarcados;
-        $this->bagagemMao = $bagagemMao;
+        $this->quantidadeBagagem = $quantidadeBagagem;
     }
 
     public function getVoo(): Voo
@@ -22,9 +22,9 @@ class Embarque
         return $this->quantidadeEmbarcados;
     }
 
-    public function getBagagemMao(): int
+    public function getQuantidadeBagagem(): int
     {
-        return $this->bagagemMao;
+        return $this->quantidadeBagagem;
     }
 
     public function setVoo(Voo $voo): void
@@ -37,8 +37,8 @@ class Embarque
         $this->quantidadeEmbarcados = $quantidadeEmbarcados;
     }
 
-    public function setBagagemMao(int $bagagemMao): void
+    public function setQuantidadeBagagem(int $quantidadeBagagem): void
     {
-        $this->bagagemMao = $bagagemMao;
+        $this->quantidadeBagagem = $quantidadeBagagem;
     }
 }

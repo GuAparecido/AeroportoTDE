@@ -2,15 +2,16 @@
 class Pessoa
 {
     private string $nome;
-    private int $idade;
+    private dateTime $dataNascimento;
     private string $cpf;
     private string $rg;
     private string $endereco;
 
-    public function __construct(string $nome, int $idade, string $cpf, string $rg, string $endereco)
+    public function __construct(string $nome, dateTime $dataNascimento, string $cpf, string $rg, string $endereco)
     {
         $this->nome = $nome;
-        $this->idade = $idade;
+        $this->dataNascimento = $dataNascimento;
+        $this->rg = $rg;
         $this->cpf = $cpf;
         $this->endereco = $endereco;
     }
@@ -20,9 +21,9 @@ class Pessoa
         return $this->nome;
     }
 
-    public function getIdade(): int
+    public function getDataNascimento(): dateTime
     {
-        return $this->idade;
+        return $this->dataNascimento;
     }
 
     public function getCpf(): string
@@ -30,7 +31,7 @@ class Pessoa
         return $this->cpf;
     }
 
-    public function getRG(): string
+    public function getRg(): string
     {
         return $this->rg;
     }
@@ -45,9 +46,9 @@ class Pessoa
         $this->nome = $nome;
     }
 
-    public function setIdade(int $idade): void
+    public function setDataNascimento(dateTime $dataNascimento): void
     {
-        $this->idade = $idade;
+        $this->dataNascimento = $dataNascimento;
     }
 
     public function setCpf(string $cpf): void
@@ -55,7 +56,7 @@ class Pessoa
         $this->cpf = $cpf;
     }
 
-    public function setRG(string $rg): void
+    public function setRg(string $rg): void
     {
         $this->rg = $rg;
     }

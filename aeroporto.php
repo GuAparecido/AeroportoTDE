@@ -1,5 +1,5 @@
 <?php
-class Aeroporto extends Voo
+class Aeroporto
 {
     private int $codigoAeroporto;
     private int $capacidadeAeronaves;
@@ -52,5 +52,13 @@ class Aeroporto extends Voo
     public function setLocalizacao(string $localizacao): void
     {
         $this->localizacao = $localizacao;
+    }
+
+    public function __toString() : string
+    {
+        return "Codigo da Aeronave " . $this-> codigoAeroporto .
+        "\nCapacidade de Aeronaves " . $this-> capacidadeAeronaves .
+        "\nCapacidade de Público " .$this-> capacidadePublico .
+        "\nLocalização " . $this-> localizacao;
     }
 }

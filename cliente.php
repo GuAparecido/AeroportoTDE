@@ -2,12 +2,18 @@
 class Cliente extends Pessoa
 {
     private int $codigoCliente;
-    private DateTime $dataCadastro;
+    private DateTime $dataNascimento;
 
-    public function __construct(int $codigoCliente, DateTime $dataCadastro)
+    public function __construct(int $codigoCliente, DateTime $dataCadastro, string $nome, DateTime $dataNascimento, string $cpf, string $rg, string $endereco)
     {
         $this->codigoCliente = $codigoCliente;
-        $this->dataCadastro = $dataCadastro;
+        $this->dataNascimento = $dataNascimento;
+        parent::setNome($nome);
+        parent::setDataNascimento($dataNascimento);
+        parent::setCpf($cpf);
+        parent::setRG($rg);
+        parent::setEndereco($endereco);
+
     }
 
     public function getCodigoCliente(): int
@@ -15,9 +21,9 @@ class Cliente extends Pessoa
         return $this->codigoCliente;
     }
 
-    public function getDataCadastro(): DateTime
+    public function getDataNascimento(): DateTime
     {
-        return $this->dataCadastro;
+        return $this->dataNascimento;
     }
 
     public function setCodigoCliente(int $codigoCliente): void
@@ -25,8 +31,8 @@ class Cliente extends Pessoa
         $this->codigoCliente = $codigoCliente;
     }
 
-    public function setDataCadastro(DateTime $dataCadastro): void
+    public function setDataNascimento(DateTime $dataNascimento): void
     {
-        $this->dataCadastro = $dataCadastro;
+        $this->dataNascimento = $dataNascimento;
     }
 }
